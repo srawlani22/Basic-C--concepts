@@ -8,6 +8,8 @@
 // Jonus and Nora helped me on this project
 // remove comments from each section before runnig the code and comment it back before running another section, just because I don't want to get things messed up!
 
+
+
 #include <iostream>
 #include <cmath>
 #include <string>
@@ -17,7 +19,18 @@ using namespace std;
 int sum(char a, char b, char c);// decalred the two functions globally
 void switchCase(string &statement);
 
+
+
+
 int main(){
+
+// Function Declarations
+//TODO: Write a function declaration and implimentation for a function that:
+//          Takes in three characters and returns the sum of any numbers that are included
+//          Characters must be passed in as char
+//          Example:    Input: A,B,C Returns: 0
+//                      Input: 1,4,Z Returns: 5
+//                      Input: 8,G,7 Returns: 15
     char a=0;// defined three characters and declared them equal to 0
     char b=0;
     char c=0;
@@ -33,15 +46,31 @@ int main(){
     c=c-48;
     cout << sum(a ,b,c);// called the sum function  
 
+
+
+
+
     
+//TODO: Write a function declaration and implimentation for a function that:
+//          Takes in a string as a reference, then switches the case of all characters
+//          The return should be void
+//          Example:    Input: |CS is Amazing!|     Output: |cs IS aMAZING!|
+//                      Input: |12345|              Output: |12345|
+//                      Input: |this is all lower|  Output: |THIS IS ALL LOWER|
+
+
     //bascially I never understood this function completely, Xavier helped me a lot on this, but I still not understood completely, you can dock points for this.
     /*string statement;// defined a string function to capture the user's string input
-    cout<< "Please enter the sentence: ";
-    getline(cin, statement);// getline captures the string
-    switchCase(statement);*/ // called the function
+        cout<< "Please enter the sentence: ";
+        getline(cin, statement);// getline captures the string
+        switchCase(statement);*/ // called the function
+
+
+
 
     
 
+//TODO: Declare two integers. Assign them interesting values. Output the evaluation of the numeric operators (+,-,*,/,%)
     /*int num1=77;// declared two integers with random values
     int num2=9;
     cout << "Addition is: "<< num1+num2 << endl;// addition operator
@@ -51,19 +80,41 @@ int main(){
     cout << "The remainder when 77 is divided by 9 is: "<< num1%num2 << endl;// modulous
 
 
+
+
+
+
+
+ //TODO: Write code that asks the user for an amount of time in hours. This input can be a decimal. Output the number of seconds represented by the input, rounded up.
+    //          Example:    Input: 1.5      Output: 90 minutes
+    //                      Input: 0.12     Output: 8 minutes
+
     /*float hours;// user can enter the hours in decimal
     cout <<"Enter time in hours: ";
     cin >> hours;
     cout<< "The entered time in hours when converted to minutes will be: "<< round(hours*60)<<" minutes"<< endl;*/// converts the hours to minutes and rounds it up
 
 
+
+
+
+
+
+
+//TODO: Capture character from the user and display the ASCII value. This should also include whitespace characters like <tab>, <space> and <enter>
     /*char input;
     cout << "Enter a character: ";
     cin.get(input);// cin.get captures all the values including whitespaces and tab spaces.
     cout << "The ASCII value of the character is: "<< static_cast<int>(input) << endl;*/ // static cast casts the char to integer to get the ASCII value
 
-   
 
+   
+    
+
+
+
+    //TODO: Add a comment to the above line to describe what is going on. What else should you add to the program to make this interesting?
+    //TODO: Use If / else statements to tell the user if testNum is greater, equal or less than 5
     /* int testNum = (rand() % 10) + 1;
     //The statement above produces a random number between 1 and 10, since its +1 after the use of random function. Then the cout statement prints that random number between 1 and 9.
     
@@ -81,7 +132,16 @@ int main(){
          cout << "The test number is smaller than 5"<< endl;
      }*/
      
+
+
+
      
+
+
+    //TODO: Ask the user for a numeric day of the week. Use a switch statement to display the text representation of that day
+    //              Example:    Input: 0    Output: Sunday
+    //                          Input: 5    Output: Friday
+    //                          Input: 8    Output: Error
 
     /*int day;// an integer day that switches from 0-6 based on user's input
     cout <<"Enter the day of the week between 0-6: " ;
@@ -116,6 +176,17 @@ int main(){
     
 
    
+
+
+    //TODO: Write a for loop to make the following pattern:
+    // * * * * 4
+    // * * * 4 5
+    // * * 4 5 6
+    // * 4 5 6 7
+    // 4 5 6 7 8
+    //
+    // At most you can use 1 if statement.
+
     // for loop patern
     /*int i,j;// intialized two general variables, could have intialized it inside the for loops but this also works
     for(i=0;i<=4;i++){// we need 5 lines, so i should be less than or equal to 4.
@@ -137,60 +208,73 @@ int main(){
 
 
 
- /*int n1=0;// three variables declared as 0 intially, so that remain 0 before user overwrutes them
- int n2=0;
- int finaldistance=0;
- cout<<"Enter the first number for the distance range: ";// user enters the two  values
- cin >> n2;
- cout <<"Enter the second number for the distance range: ";
- cin>>n1;
- finaldistance=n2;// the distance is equal to the initial value, since it starts from the initial value 
- if(n2<n1){ // if the first number is smaller and the second is bigger, the distance will be printed upto the bigger number
-     while(finaldistance < n1){
-         cout << finaldistance <<" ";
-         finaldistance++; // final distance is incremented since the initial distance is greater than the finaldistance
-     }
+
+    //TODO: Write a while loop that counts the distance between two numbers.
+    //            Example: Input: 4, 10     Output: 4 5 6 7 8 9 10, Distance: 6
+    //            Example: Input: 10, 5     Output: 10 9 8 7 6 5, Distance: -5
+
+    /*int n1=0;// three variables declared as 0 intially, so that remain 0 before user overwrutes them
+    int n2=0;
+    int finaldistance=0;
+    cout<<"Enter the first number for the distance range: ";// user enters the two  values
+    cin >> n2;
+    cout <<"Enter the second number for the distance range: ";
+    cin>>n1;
+        finaldistance=n2;// the distance is equal to the initial value, since it starts from the initial value 
+        if(n2<n1){ // if the first number is smaller and the second is bigger, the distance will be printed upto the bigger number
+            while(finaldistance < n1){
+                cout << finaldistance <<" ";
+                 finaldistance++; // final distance is incremented since the initial distance is greater than the finaldistance
+            }
  }
 
- if(n1<n2){if the first number is bigger and the second is smaller, the distance will be negative and will be printed in backward order.
-     while(finaldistance >n1){ // 
-         cout << finaldistance << " ";
-         finaldistance--;//final distance is decremented since the initial distance is less than the finaldistance
-     }
+        if(n1<n2){if the first number is bigger and the second is smaller, the distance will be negative and will be printed in backward order.
+            while(finaldistance >n1){ // 
+                cout << finaldistance << " ";
+                 finaldistance--;//final distance is decremented since the initial distance is less than the finaldistance
+            }
  }
- cout << endl;
- cout <<"The total distance is "<< n1-n2 << endl;*/ // the total distance is final minus initial, simple physics.
+    cout << endl;
+    cout <<"The total distance is "<< n1-n2 << endl;*/ // the total distance is final minus initial, simple physics.
 
 
 
+
+    
+
+    
+    //TODO: Initilize an array of integers called myArray. It should contain 10 different numbers
+    //TODO: Initilize an array of integers called yarrAym. Fill this array with the same numbers in myArray, but backwards.
+    //TODO: Output the contents of each array, along with the first, fifth and last values. Try to make this look nice.
+    //TODO: Sum up the contents of both arrays, confirm using code that they are the same value
 
 
     /*const int lenght=10;// constant integer size of an array
-    int myArray[]={0,1,2,3,4,5,6,7,8,9};// defined two arrays as asked in the question, the other one is backwords of the first one
-    int yarrAym[]={9,8,7,6,5,4,3,2,1,0};
+        int myArray[]={0,1,2,3,4,5,6,7,8,9};// defined two arrays as asked in the question, the other one is backwords of the first one
+        int yarrAym[]={9,8,7,6,5,4,3,2,1,0};
     
-    for(int i=0; i<lenght; i++){
-        cout<< myArray[i]<< " ";// iterated through the array using a simple for loop, as did in LM 9 of CS 171.
-    }
-    cout << endl;
-    for(int i=0; i<lenght; i++){// same as myArray
-        cout<< yarrAym[i]<< " ";
-    }
-    cout << endl;
+            for(int i=0; i<lenght; i++){
+                cout<< myArray[i]<< " ";// iterated through the array using a simple for loop, as did in LM 9 of CS 171.
+            }
+            cout << endl;
+            for(int i=0; i<lenght; i++){// same as myArray
+                cout<< yarrAym[i]<< " ";
+            }
+            cout << endl;
 
     cout << myArray[0] << " " << myArray[4]<< " "<< myArray[9] << endl;// iterated through the particular values of the array, that is first, fifth and the last
     cout << yarrAym[0] << " " << yarrAym[4]<< " "<< yarrAym[9] << endl;// did the same for yarrAym
 
-    int sum=0;// intialized a variable equal to 0
-    for(int i=0; i<lenght;i++){
-        sum+=myArray[i]; // iterated through the array and added the elements by looping every element until the loop reaches the last value of the array
-        }
-    cout << sum << endl;// prints the sum of all the values inside of the array.
+        int sum=0;// intialized a variable equal to 0
+        for(int i=0; i<lenght;i++){
+            sum+=myArray[i]; // iterated through the array and added the elements by looping every element until the loop reaches the last value of the array
+            }
+        cout << sum << endl;// prints the sum of all the values inside of the array.
     sum=0;
-    for(int i=0; i<lenght;i++){
-        sum+=yarrAym[i]; // did the same for yarrAym
-        }
-    cout << sum << endl;*/
+        for(int i=0; i<lenght;i++){
+            sum+=yarrAym[i]; // did the same for yarrAym
+            }
+        cout << sum << endl;*/
 
 
 
